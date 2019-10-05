@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import HomePage from './components/homePage';
+import './App.css';
+import './assets/css/all.min.css';
+import './assets/css/bootstrap.min.css';
+import './assets/css/templatemo-style.css'; 
+// import MainStore from './components/store';
+import {observer} from 'mobx-react';
+
+@observer
+class App extends React.Component{
+  render (){
+    return (
+      <div>
+        <HomePage/>
+      </div>
+    );
+  }
 }
 
 export default App;
